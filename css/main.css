@@ -83,6 +83,7 @@ body {
   margin-left: 30px;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  height: 16px;
 }
 .menu-right__link:focus, .menu-right__link:hover {
   color: #2196f3;
@@ -93,6 +94,7 @@ body {
 .menu-right__icon-mail-phone {
   fill: currentColor;
   margin-right: 10px;
+  vertical-align: middle;
 }
 
 .nav-submenu {
