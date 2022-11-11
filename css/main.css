@@ -27,6 +27,13 @@ body {
   color: #212121;
 }
 
+:root {
+  --phone: (
+    max-width: 767px
+  );
+  --desktop: (min-width: 1200px);
+}
+
 .menu-border {
   border-bottom: 1px solid #ececec;
   min-height: 80px;
@@ -189,6 +196,12 @@ body {
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: 1600px, 1600px, 100%;
   background-position: center, center, center;
+}
+@media (min-width: 1200px) {
+  .call-to-action--bg {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/index/cta_bg-1200.jpg), -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), to(rgb(255, 255, 255)));
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url(../images/index/cta_bg-1200.jpg), linear-gradient(rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+  }
 }
 .call-to-action__h1 {
   font-weight: 900;
