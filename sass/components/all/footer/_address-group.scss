@@ -1,0 +1,32 @@
+.address-group {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 81px;
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.71;
+    font-style: normal;
+    letter-spacing: 0.03em;
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 1.71;
+    font-style: normal;
+    text-decoration: none;
+    color: getColor(ordinary-font);
+    transition: color $transition-time-timing;
+
+    &:focus,
+    &:hover {
+      color: getColor(highlighter);
+    }
+
+    &:visited {
+      color: inherit;
+    }
+  }
+}

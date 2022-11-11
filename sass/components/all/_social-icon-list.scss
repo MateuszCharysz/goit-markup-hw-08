@@ -1,0 +1,30 @@
+.social-icon-list {
+  display: flex;
+  justify-content: space-between;
+  width: 206px;
+  margin: 0 auto;
+
+  &__background-of-icon {
+    background-color: getColor(elipse);
+    width: 44px;
+    border-radius: 50%;
+    line-height: 0;
+    transition: background-color $transition-time-timing;
+
+    &:hover {
+      background-color: getColor(highlighter);
+    }
+  }
+
+  &__icon {
+    fill: getColor(client-logo);
+    transition: fill $transition-time-timing;
+    &:hover {
+      fill: #fff;
+    }
+  }
+
+  &__icon--contrast {
+    fill: #fff;
+  }
+}

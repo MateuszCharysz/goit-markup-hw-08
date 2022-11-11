@@ -1,0 +1,32 @@
+.call-to-action {
+  min-height: 600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: getColor(bg-dark);
+  color: #fff;
+
+  &--bg {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4) 0%,
+        rgba(47, 48, 58, 0.4) 100%
+      ),
+      url(../images/index/cta_bg.jpg),
+      linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 1600px, 1600px, 100%;
+    background-position: center, center, center;
+  }
+
+  &__h1 {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    width: 696px;
+  }
+}

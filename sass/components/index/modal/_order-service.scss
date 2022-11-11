@@ -1,0 +1,93 @@
+.order-service {
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 93%;
+
+  &__labels {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: getColor(ordinary-font);
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.33em;
+    width: 100%;
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 2.42em;
+    left: 1em;
+    fill: getColor(main-font);
+  }
+
+  &__squeres {
+    font-size: 16px;
+    line-height: 2.25;
+    letter-spacing: 0.01em;
+    color: getColor(ordinary-font);
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    text-indent: 42px;
+  }
+
+  &__squeres:focus ~ &__icon,
+  &__squeres:focus,
+  &__comment:focus {
+    fill: getColor(highlighter);
+    border-color: getColor(highlighter);
+    outline-style: none;
+    transition: border-color $transition-time-timing,
+      fill $transition-time-timing;
+  }
+
+  &__comment {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: getColor(ordinary-font);
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+    height: 120px;
+    resize: none;
+    overflow: auto;
+  }
+
+  &__checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: inherit;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: getColor(ordinary-font);
+  }
+
+  &__checkbox-link {
+    color: getColor(highlighter);
+  }
+
+  &__custom-checkbox {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
+    width: 16px;
+    height: 15px;
+    background-image: url('data:image/svg+xml,%3Csvg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15"%3E%3Cpath d="M14.222 1.667v11.666H1.778V1.667h12.444Zm0-1.667H1.778C.8 0 0 .75 0 1.667v11.666C0 14.25.8 15 1.778 15h12.444C15.2 15 16 14.25 16 13.333V1.667C16 .75 15.2 0 14.222 0Z" fill="%23212121"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+
+    &:checked {
+      background-image: url('data:image/svg+xml,%3Csvg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15"%3E%3Crect width="16" height="15" rx="2" fill="%232196F3"/%3E%3Cpath d="m3.957 7.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z" fill="%23fff" stroke="%23fff" stroke-width=".2"/%3E%3C/svg%3E');
+    }
+  }
+}

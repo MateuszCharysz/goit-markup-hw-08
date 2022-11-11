@@ -1,0 +1,25 @@
+.client-list {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    line-height: 0px;
+  }
+
+  &__logo {
+    fill: getColor(client-logo);
+    width: 170px;
+    height: 92px;
+    border: 1px solid getColor(client-logo);
+    border-radius: 4px;
+    padding: 16px 0;
+    transition: fill $transition-time-timing,
+      border-color $transition-time-timing;
+
+    &:hover {
+      fill: getColor(highlighter);
+      border-color: getColor(highlighter);
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.footer-social {
+  margin-left: 70px;
+  padding-top: 12px;
+
+  &__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: $line-height-for-font-14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+}

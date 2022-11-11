@@ -1,0 +1,40 @@
+@import 'utils/variables.scss'; ///contains "normalizer"
+@import 'components/all/header/menu-border'; ///background - small line
+@import 'components/all/header/menu'; ///positioning
+@import 'components/all/header/menu-left'; ///positioning for logo and navsubmenu
+@import 'components/all/header/menu-right';
+@import 'components/all/header/nav-submenu';
+@import 'components/all/logo'; ///also in footer
+
+@import 'components/index/call-to-action';
+@import 'components/all/button1'; ///in index, footer and modal
+@import 'components/index/features'; ///positioning
+@import 'components/index/feature';
+@import 'components/index/boxes'; ///positioning
+@import 'components/index/box';
+@import 'components/index/team'; ///background
+@import 'components/index/team-cards'; ///positioning
+@import 'components/index/team-card';
+@import 'components/index/client-list';
+
+@import 'components/all/footer/footer-flex'; ///positioning
+@import 'components/all/footer/contact-data'; ///background and other things
+@import 'components/all/footer/address-group';
+@import 'components/all/footer/footer-social';
+@import 'components/all/footer/email-input';
+
+@import 'components/index/modal/modal'; ///window frame with close button and form title
+// @import 'components/index/modal/order-service'; //form - dont know how to write :focus for inputs in "smart" way
+@import 'components/index/modal/order-service-copy'; ///trying @extend with placeholder for focus
+@import 'components/index/modal/backdrop'; ///includes js classes for animation
+@import 'components/index/modal/is-hidden';
+
+@import 'components/portfolio/filter';
+@import 'components/portfolio/project-gallery'; ///positioning
+@import 'components/portfolio/project';
+
+
+@import 'components/all/social-icon-list'; //in index and footer
+@import 'components/all/section'; //for every section - padding and h2
+@import 'components/all/container'; //wrapper or container 1200 px
+@import 'utils/animation'; //mixin for adding animations
