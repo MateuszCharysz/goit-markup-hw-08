@@ -1,39 +1,76 @@
-
 .call-to-action {
-  min-height: 600px;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  min-height: 400px;
+  max-height: 600px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: getColor(bg-dark);
   color: #fff;
 
-  &--bg {
-    $overlay: (linear-gradient(
-        rgba(47, 48, 58, 0.4) 0%,
-        rgba(47, 48, 58, 0.4) 100%
-      ));
-      $whiteout: (linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%));
-    background-image: $overlay,
-      url(../images/index/cta_bg.jpg),
-      $whiteout;
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-size: 1600px, 1600px, 100%;
-    background-position: center, center, center;
+  // min-height: 400px;
+  // max-height: 600px;
+  // padding-top: 200px;
+  // padding-bottom: 200px;
+  // max-width: 100%;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  // background-color: getColor(bg-dark);
+  // color: #fff;
 
-    @include desktop {    background-image: $overlay,
-      url(../images/index/cta_bg-1200.jpg),
-      $whiteout;}
+
+  &--bg {
+    $overlay: (
+      linear-gradient(rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%)
+    );
+    $whiteout: (
+      linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)
+    );
+    background-image: $overlay, url(../images/index/cta_bg.jpg), $whiteout;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 1600px, cover, 100%;
+    background-position: center, center, center;
+    transition: transform $transition-time-timing;
+
+    @include desktop {
+      background-image: $overlay, url(../images/index/cta_bg-1200.jpg),
+        $whiteout;
+        background-size: 1600px, 1600px, 100%;
+        }
+
+    @include desktopx2 {
+      background-image: $overlay, url(../images/index/cta_bg-1200_2x.jpg),
+        $whiteout;
+    }
+    @include tablet {
+      background-image: $overlay, url(../images/index/cta_bg-768.jpg), $whiteout;
+    }
+    @include tabletx2 {
+      background-image: $overlay, url(../images/index/cta_bg-768_2x.jpg),
+        $whiteout;
+    }
   }
 
   &__h1 {
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    width: 696px;
+    width: 365px;
   }
+
+  //   &__h1 {
+  //   font-weight: 900;
+  //   font-size: 44px;
+  //   line-height: 1.36;
+  //   text-align: center;
+  //   letter-spacing: 0.06em;
+  //   text-transform: uppercase;
+  //   width: 696px;
+  // }
 }

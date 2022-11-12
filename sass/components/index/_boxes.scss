@@ -3,3 +3,10 @@
   display: flex;
   justify-content: space-between;
 }
+
+.boxes--desktop {
+  display: none;
+  @include desktop {
+    display: block;
+  }
+}

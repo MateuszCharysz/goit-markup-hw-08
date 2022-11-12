@@ -1,10 +1,4 @@
 //Davidwalsh.name - media querry mixin aproach - breakpoints
-:root {
-    --phone: (
-    max-width: 767px
-  );
-  --desktop: (min-width: 1200px);
-}
 
 // $breakpoint: (
 //   'phone': (
@@ -18,7 +12,7 @@
 //       (
 //         max-width: 1199px
 //       )),
-  
+
 // //   'desktop': #{
 // //     min-width 1200px
 // //   },
@@ -32,32 +26,32 @@
 //   @return map-get($breakpoint, $key);
 // }
 
-// @mixin tablet {
-//   @media screen and (getWidth('tablet')) {
-//     @content;
-//   }
-// }
-
-// @mixin tabletx2 {
-//   @media screen and (getWidth('tablet')) and (getWidth('retinax2')) {
-//     @content;
-//   }
-// }
-
-@mixin desktop {
-  @media (min-width: 1200px) {
+@mixin tablet {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     @content;
   }
 }
 
-// @mixin desktopx2 {
-//   @media screen and (getWidth('desktop')) and (getWidth('retinax2')) {
-//     @content;
-//   }
-// }
+@mixin tabletx2 {
+  @media screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin desktopx2 {
+  @media screen and (min-width: 1200px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2) {
+    @content;
+  }
+}
 
 // @mixin phonex2 {
-//   @media screen and (getWidth('phone')) and (getWidth('retinax2')) {
+//   @media (getWidth('phone')) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2) {
 //     @content;
 //   }
 // }
