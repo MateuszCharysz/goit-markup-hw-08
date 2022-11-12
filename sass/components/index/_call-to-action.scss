@@ -7,20 +7,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 30px;
   background-color: getColor(bg-dark);
   color: #fff;
+  transition: transform $transition-time-timing;
 
-  // min-height: 400px;
-  // max-height: 600px;
-  // padding-top: 200px;
-  // padding-bottom: 200px;
-  // max-width: 100%;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
-  // background-color: getColor(bg-dark);
-  // color: #fff;
-
+  @include desktop {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 
   &--bg {
     $overlay: (
@@ -33,13 +28,13 @@
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 1600px, cover, 100%;
     background-position: center, center, center;
-    transition: transform $transition-time-timing;
+    transition: background-size $transition-time-timing;
 
     @include desktop {
       background-image: $overlay, url(../images/index/cta_bg-1200.jpg),
         $whiteout;
-        background-size: 1600px, 1600px, 100%;
-        }
+      background-size: 1600px, 1600px, 100%;
+    }
 
     @include desktopx2 {
       background-image: $overlay, url(../images/index/cta_bg-1200_2x.jpg),
@@ -62,6 +57,14 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     width: 365px;
+    // transition: transform $transition-time-timing;
+    @include desktop {
+      // transform: scale(1.91, 1.69);
+      // transform-origin: bottom center;
+      font-size: 44px;
+      line-height: 1.36;
+      width: 696px;
+    }
   }
 
   //   &__h1 {

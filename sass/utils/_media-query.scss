@@ -1,31 +1,5 @@
 //Davidwalsh.name - media querry mixin aproach - breakpoints
 
-// $breakpoint: (
-//   'phone': (
-//     max-width: 767px
-//   ),
-//   'tablet':
-//   (    (
-//         min-width: 768px
-//       )
-//       and
-//       (
-//         max-width: 1199px
-//       )),
-
-// //   'desktop': #{
-// //     min-width 1200px
-// //   },
-//   'retinax2': (
-//     min-resolution: 2dppx,
-//     min-device-pixel-ratio: 2,
-//   ),
-// );
-
-// @function getWidth($key) {
-//   @return map-get($breakpoint, $key);
-// }
-
 @mixin tablet {
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     @content;

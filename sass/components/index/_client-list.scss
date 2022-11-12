@@ -8,7 +8,15 @@
   &__item {
     line-height: 0px;
     width: calc((100% - 30px) / 2);
-    
+    transition: width $transition-time-timing;
+
+    @include tablet {
+      width: calc((100% - 60px) / 3);
+    }
+
+    @include desktop {
+      width: calc((100% - 150px) / 6);
+    }
   }
 
   &__logo {

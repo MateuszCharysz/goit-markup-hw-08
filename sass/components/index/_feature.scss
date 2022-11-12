@@ -4,6 +4,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  transition: width $transition-time-timing;
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
 
   &__h3title {
     font-family: 'Roboto';
