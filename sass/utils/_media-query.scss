@@ -1,4 +1,4 @@
-//Davidwalsh.name - media querry mixin aproach - breakpoints
+//Davidwalsh.name - media querry mixin aproach - specific mixin for specific sutyation
 
 @mixin tablet {
   @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -24,8 +24,13 @@
   }
 }
 
-// @mixin phonex2 {
-//   @media (getWidth('phone')) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2) {
-//     @content;
-//   }
-// }
+@mixin constant-input {
+  @media (min-width: 480px) {
+    @content;
+  }
+}/// this one mixin is used in footer/_email-input.scss
+@mixin phonex2 {
+  @media (max-width: 767px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2) {
+    @content;
+  }
+}

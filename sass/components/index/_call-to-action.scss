@@ -47,6 +47,10 @@
       background-image: $overlay, url(../images/index/cta_bg-768_2x.jpg),
         $whiteout;
     }
+
+    @include phonex2 {
+      background-image: $overlay, url(../images/index/cta_bg_2x.jpg), $whiteout;
+    }
   }
 
   &__h1 {

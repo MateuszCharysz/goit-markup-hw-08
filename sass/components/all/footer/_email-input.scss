@@ -1,9 +1,10 @@
 .email-input {
-  display: flex;
-  flex-direction: column;
-  margin-left: 70px;
-  padding-top: 12px;
-  width: 570px;
+  // margin-left: 70px;
+  // padding-top: 12px;
+  width: calc(100vw - 30px);
+  height: 156px;
+
+  @include constant-input {width: 450px;}
 
   &__text {
     font-weight: 700;
@@ -11,14 +12,18 @@
     line-height: $line-height-for-font-14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
   }
 
   &__form {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: inherit;
     column-gap: 12px;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    height: inherit;
   }
 
   &__entry {
@@ -30,7 +35,7 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     padding: 14px 16px;
-    width: 358px;
+    width: 100%;
     background-color: inherit;
     transition: border-color $transition-time-timing;
 
@@ -40,3 +45,45 @@
     }
   }
 }
+// .email-input {
+//   display: flex;
+//   flex-direction: column;
+//   margin-left: 70px;
+//   padding-top: 12px;
+//   width: 570px;
+
+//   &__text {
+//     font-weight: 700;
+//     font-size: 14px;
+//     line-height: $line-height-for-font-14;
+//     letter-spacing: 0.03em;
+//     text-transform: uppercase;
+//     margin-bottom: 20px;
+//   }
+
+//   &__form {
+//     display: flex;
+//     justify-content: flex-end;
+//     width: inherit;
+//     column-gap: 12px;
+//   }
+
+//   &__entry {
+//     font-size: 16px;
+//     line-height: 1.25;
+//     letter-spacing: 0.03em;
+//     color: rgba(255, 255, 255, 0.6);
+//     border: 1px solid rgba(255, 255, 255, 0.3);
+//     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+//     border-radius: 4px;
+//     padding: 14px 16px;
+//     width: 358px;
+//     background-color: inherit;
+//     transition: border-color $transition-time-timing;
+
+//     &:focus {
+//       border-color: getColor(highlighter);
+//       outline: none;
+//     }
+//   }
+// }
