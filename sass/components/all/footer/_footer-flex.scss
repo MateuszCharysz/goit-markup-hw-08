@@ -5,10 +5,22 @@
   flex-direction: column;
   padding: 0 15px;
 
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 89px;
+  }
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   &__logo-address {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 60px;
+  @include desktop {display:block}
   }
 }

@@ -4,7 +4,7 @@
   width: calc(100vw - 30px);
   height: 156px;
 
-  @include constant-input {width: 450px;}
+  @include constant-input {width: 450px; margin: 0 auto;}
 
   &__text {
     font-weight: 700;

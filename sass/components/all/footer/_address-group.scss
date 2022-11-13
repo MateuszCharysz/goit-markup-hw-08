@@ -11,6 +11,8 @@
     font-style: normal;
     letter-spacing: 0.03em;
     text-align: center;
+    @include desktop {text-align: left;}
+    
   }
 
   &__link {
@@ -21,6 +23,7 @@
     color: getColor(ordinary-font);
     transition: color $transition-time-timing;
     text-align: center;
+    @include desktop {text-align: left;}
 
     &:focus,
     &:hover {
