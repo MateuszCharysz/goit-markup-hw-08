@@ -151,17 +151,16 @@ body {
   text-decoration: none;
   display: block;
   letter-spacing: 0.03em;
-  width: 145px;
 }
 .logo--color {
-  background-image: -webkit-gradient(linear, left top, right top, from(#2196f3), color-stop(38%, #2196f3), color-stop(38%, #212121), to(#212121));
-  background-image: linear-gradient(to right, #2196f3 0%, #2196f3 38%, #212121 38%, #212121 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#2196f3), color-stop(40.4%, #2196f3), color-stop(40.4%, #212121), to(#212121));
+  background-image: linear-gradient(to right, #2196f3 0%, #2196f3 40.4%, #212121 40.4%, #212121 100%);
   -webkit-background-clip: text;
   background-clip: text;
 }
 .logo--color-contr {
-  background-image: -webkit-gradient(linear, left top, right top, from(#2196f3), color-stop(38%, #2196f3), color-stop(38%, #fff), to(#fff));
-  background-image: linear-gradient(to right, #2196f3 0%, #2196f3 38%, #fff 38%, #fff 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#2196f3), color-stop(40.4%, #2196f3), color-stop(40.4%, #fff), to(#fff));
+  background-image: linear-gradient(to right, #2196f3 0%, #2196f3 40.4%, #fff 40.4%, #fff 100%);
   -webkit-background-clip: text;
   background-clip: text;
 }

@@ -7,14 +7,13 @@
   text-decoration: none;
   display: block;
   letter-spacing: 0.03em;
-  width: 145px;
 
   &--color {
     background-image: linear-gradient(
       to right,
       getColor(highlighter) 0%,
-      getColor(highlighter) 38%,
-      getColor(main-font) 38%,
+      getColor(highlighter) 40.4%,
+      getColor(main-font) 40.4%,
       getColor(main-font) 100%
     );
     -webkit-background-clip: text;
@@ -25,8 +24,8 @@
     background-image: linear-gradient(
       to right,
       getColor(highlighter) 0%,
-      getColor(highlighter) 38%,
-      #fff 38%,
+      getColor(highlighter) 40.4%,
+      #fff 40.4%,
       #fff 100%
     );
     -webkit-background-clip: text;
