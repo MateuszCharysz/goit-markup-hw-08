@@ -3,8 +3,11 @@
   // padding-top: 12px;
   width: calc(100vw - 30px);
   height: 156px;
+  transition: width $transition-time-timing;
 
   @include constant-input {width: 450px; margin: 0 auto;}
+
+  @include desktop {width: 570px; height: 86px; padding-top: 12px;}
 
   &__text {
     font-weight: 700;
@@ -12,7 +15,8 @@
     line-height: $line-height-for-font-14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    // margin-bottom: 20px;
+    @include desktop {margin-bottom: 20px;
+    }
   }
 
   &__form {
@@ -24,6 +28,7 @@
     align-content: center;
     align-items: center;
     height: inherit;
+    @include desktop {flex-wrap: wrap; align-items: flex-start; justify-content: flex-end;}
   }
 
   &__entry {
@@ -43,6 +48,7 @@
       border-color: getColor(highlighter);
       outline: none;
     }
+    @include desktop {width: 358px;}
   }
 }
 // .email-input {

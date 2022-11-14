@@ -4,6 +4,17 @@
   align-items: center;
   margin-bottom: 60px;
 
+  @include tablet {
+    margin-left: 130px;
+    padding-top: 12px;
+  }
+  @include desktop {
+    margin-left: 70px;
+    padding-top: 12px;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+
   &__text {
     font-weight: 700;
     font-size: 14px;

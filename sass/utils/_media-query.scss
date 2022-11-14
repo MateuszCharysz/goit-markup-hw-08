@@ -25,7 +25,7 @@
 }
 
 @mixin constant-input {
-  @media (min-width: 480px) {
+  @media (min-width: 480px) and (max-width: 1199px) {
     @content;
   }
 }/// this one mixin is used in footer/_email-input.scss
