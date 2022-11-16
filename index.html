@@ -23,10 +23,53 @@ font-family: "Roboto", sans-serif;-->
 
 <body>
   <header class="menu-border">
+    <div class="menu-mobile-bar">
+      <a class="logo logo--color menu-mobile-bar__logo" href="index.html">WebStudio</a>
+      <button type="button" class="toggle-button js-open-menu">
+        <svg width="40px" height="40px" class="toggle-button__icon">
+          <use href="images/icons.svg#icon-mobile-menu"></use>
+        </svg>
+      </button>
+      <div class="menu-mobile js-menu-container" id="mobile-menu">
+        <button type="button" class="toggle-button menu-mobile__toggle-button js-close-menu">
+          <svg width="40px" height="40px" class="toggle-button__icon">
+            <use href="images/icons.svg#icon-mobile-menu-close"></use>
+          </svg>
+        </button>
+        <nav class="menu-mobile__navigation">
+          <a class="menu-mobile__link menu-mobile__link--present" href="index.html#Agencja">Agencja</a>
+          <a class="menu-mobile__link" href="portfolio.html">Portfolio</a>
+          <a class="menu-mobile__link" href="#Kontakt">Kontakt</a>
+        </nav>
+        <ul class="menu-mobile__contact-group">
+          <li><a class="menu-mobile__link menu-mobile__link--phone" href="tel:+48111111111">+48 111 111 111</a></li>
+          <li><a class="menu-mobile__link menu-mobile__link--mail"
+              href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+        </ul>
+        <ul class="menu-mobile__social-media">
+          <li>
+            <a href="" target="_blank" rel="external noopener noreferrer"
+              class="menu-mobile__link menu-mobile__link--social">Instagram</a>
+          </li>
+          <li>
+            <a href="" target="_blank" rel="external noopener noreferrer"
+              class="menu-mobile__link menu-mobile__link--social">Twitter</a>
+          </li>
+          <li>
+            <a href="" target="_blank" rel="external noopener noreferrer"
+              class="menu-mobile__link menu-mobile__link--social">Facebook</a>
+          </li>
+          <li>
+            <a href="" target="_blank" rel="external noopener noreferrer"
+              class="menu-mobile__link menu-mobile__link--social">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <div class="menu container">
       <a class="logo logo--color" href="index.html">WebStudio</a>
       <div class="menu-left">
-          <nav class="nav-submenu">
+        <nav class="nav-submenu">
           <a class="nav-submenu__link nav-submenu__link--present" href="index.html#Agencja">Agencja</a>
           <a class="nav-submenu__link" href="portfolio.html">Portfolio</a>
           <a class="nav-submenu__link" href="#Kontakt">Kontakt</a>
@@ -46,10 +89,10 @@ font-family: "Roboto", sans-serif;-->
   </header>
   <main id="Agencja">
     <section class="call-to-action call-to-action--bg">
-      <h1 class="call-to-action__h1 container">
+      <h1 class="call-to-action__h1">
         efektywne rozwiązania dla naszego biznesu
       </h1>
-      <button type="button" class="button1 container" data-modal-open>
+      <button type="button" class="button1" data-modal-open>
         Zamów usługe
       </button>
     </section>
@@ -434,6 +477,7 @@ font-family: "Roboto", sans-serif;-->
   </div>
   <script src="js/modal.js">
   </script>
+  <script src="js/mobile-menu.js"></script>
 </body>
 
 </html>

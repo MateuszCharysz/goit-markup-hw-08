@@ -23,6 +23,13 @@
     position: absolute;
     top: 8px;
     right: 8px;
+    fill: #000;
+
+    &:focus,
+    &:hover,
+    &:active {
+      fill: getColor(highlighter);
+    }
   }
 
   &__title {
@@ -35,7 +42,6 @@
   }
 
   &__close-icon {
-    fill: #000;
     margin: auto;
   }
 }

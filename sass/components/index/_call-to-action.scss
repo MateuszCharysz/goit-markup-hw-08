@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 30px;
+  align-items: center;
   background-color: getColor(bg-dark);
   color: #fff;
   transition: transform $transition-time-timing;
@@ -60,14 +61,14 @@
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    width: 365px;
+    max-width: 365px;
     // transition: transform $transition-time-timing;
     @include desktop {
       // transform: scale(1.91, 1.69);
       // transform-origin: bottom center;
       font-size: 44px;
       line-height: 1.36;
-      width: 696px;
+    max-width: 696px;
     }
   }
 
