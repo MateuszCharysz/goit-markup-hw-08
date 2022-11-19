@@ -1,8 +1,10 @@
 .nav-submenu {
   vertical-align: middle;
   display: flex;
-  width: 254px;
+  width: 282px;
   justify-content: space-between;
+
+  @include desktop {width: 254px;}
 
   &__link {
     text-decoration: none;

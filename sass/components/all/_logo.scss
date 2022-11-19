@@ -8,30 +8,32 @@
   display: block;
   letter-spacing: 0.03em;
 
+  @include desktop {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+
   &--color {
-    background-image: linear-gradient(
-      to right,
-      getColor(highlighter) 0%,
-      getColor(highlighter) 40.4%,
-      getColor(main-font) 40.4%,
-      getColor(main-font) 100%
-    );
+    background-image: linear-gradient(to right,
+        getColor(highlighter) 0%,
+        getColor(highlighter) 40.4%,
+        getColor(main-font) 40.4%,
+        getColor(main-font) 100%);
     -webkit-background-clip: text;
     background-clip: text;
   }
 
   &--color-contr {
-    background-image: linear-gradient(
-      to right,
-      getColor(highlighter) 0%,
-      getColor(highlighter) 40.4%,
-      #fff 40.4%,
-      #fff 100%
-    );
+    background-image: linear-gradient(to right,
+        getColor(highlighter) 0%,
+        getColor(highlighter) 40.4%,
+        #fff 40.4%,
+        #fff 100%);
     -webkit-background-clip: text;
     background-clip: text;
   }
 }
+
 // .logo {
 //   font-family: 'Raleway';
 //   font-size: 26px;
