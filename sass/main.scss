@@ -1,9 +1,9 @@
 @import 'utils/variables.scss'; ///contains "normalizer"
 @import 'utils/media-query'; /// contains mixins and only mixins for media querry (if mixin was needed it was added in component)
-@import 'components/all/header/menu-mobile-bar';/// container
+@import 'components/all/header/menu-mobile-bar'; /// container
 @import 'components/all/header/toggle-button';
-@import 'components/all/header/is-open';/// js - open class
 @import 'components/all/header/menu-mobile';
+@import 'components/all/header/is-open'; /// js - open class
 @import 'components/all/header/menu-border'; ///background - small line
 @import 'components/all/header/menu'; ///positioning
 @import 'components/all/header/menu-left'; ///positioning for logo and navsubmenu
