@@ -11,9 +11,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  row-gap: 10px;
   width: 100%;
-  height: 93%;
+  height: 89%;
 
   &__labels {
     font-size: 12px;
@@ -72,11 +72,15 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-grow: 1;
     width: inherit;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: getColor(ordinary-font);
+
+    @include desktop {font-size: 14px;
+      line-height: 1.71;}
   }
 
   &__checkbox-link {
@@ -92,6 +96,8 @@
     height: 15px;
     background-image: url('data:image/svg+xml,%3Csvg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15"%3E%3Cpath d="M14.222 1.667v11.666H1.778V1.667h12.444Zm0-1.667H1.778C.8 0 0 .75 0 1.667v11.666C0 14.25.8 15 1.778 15h12.444C15.2 15 16 14.25 16 13.333V1.667C16 .75 15.2 0 14.222 0Z" fill="%23212121"/%3E%3C/svg%3E');
     background-repeat: no-repeat;
+
+    @include desktop {height: 20px;}
 
     &:checked {
       background-image: url('data:image/svg+xml,%3Csvg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15"%3E%3Crect width="16" height="15" rx="2" fill="%232196F3"/%3E%3Cpath d="m3.957 7.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z" fill="%23fff" stroke="%23fff" stroke-width=".2"/%3E%3C/svg%3E');
