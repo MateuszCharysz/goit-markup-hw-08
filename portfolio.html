@@ -5,10 +5,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Webstudio - Main Page</title>
-  <!-- <link rel="preload" as="image" type="image/svg+xml" href="images/icons.svg" /> -->
+  <title>Webstudio - Portfolio</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css" />
-  <!-- <link rel="stylesheet" href="css/styles.css" /> -->
   <link rel="stylesheet" href="css/main.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,22 +19,65 @@ font-family: "Roboto", sans-serif;-->
 
 <body>
   <header class="menu-border">
-    <div class="menu container">
-      <div class="menu-left">
-        <a class="logo logo--color" href="index.html">WebStudio</a>
-        <nav class="nav-submenu">
-          <a class="nav-submenu__link" href="index.html">Agencja</a>
-          <a class="nav-submenu__link nav-submenu__link--present" href="portfolio.html#Portfolio">Portfolio</a>
-          <a class="nav-submenu__link" href="#Kontakt">Kontakt</a>
+    <div class="menu-mobile-bar">
+      <a class="logo logo--color menu-mobile-bar__logo" href="index.html">WebStudio</a>
+      <button type="button" class="toggle-button js-open-menu">
+        <svg width="40px" height="40px" class="toggle-button__icon">
+          <use href="images/icons.svg#icon-mobile-menu"></use>
+        </svg>
+      </button>
+      <div class="menu-mobile js-menu-container" id="mobile-menu">
+        <button type="button" class="toggle-button menu-mobile__toggle-button js-close-menu">
+          <svg width="40px" height="40px" class="toggle-button__icon">
+            <use href="images/icons.svg#icon-mobile-menu-close"></use>
+          </svg>
+        </button>
+        <nav class="menu-mobile__navigation">
+          <a class="menu-mobile__link" href="index.html#Agencja">Agencja</a>
+          <a class="menu-mobile__link menu-mobile__link--present" href="portfolio.html">Portfolio</a>
+          <a class="menu-mobile__link" href="#Kontakt">Kontakt</a>
         </nav>
+        <div>
+          <ul class="menu-mobile__contact-group">
+            <li><a class="menu-mobile__link menu-mobile__link--phone" href="tel:+48111111111">+48 111 111 111</a></li>
+            <li><a class="menu-mobile__link menu-mobile__link--mail"
+                href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+          </ul>
+          <ul class="menu-mobile__social-media">
+            <li>
+              <a href="" target="_blank" rel="external noopener noreferrer"
+                class="menu-mobile__link menu-mobile__link--social">Instagram</a>
+            </li>
+            <li class="menu-mobile__social-list">
+              <a href="" target="_blank" rel="external noopener noreferrer"
+                class="menu-mobile__link menu-mobile__link--social">Twitter</a>
+            </li>
+            <li class="menu-mobile__social-list">
+              <a href="" target="_blank" rel="external noopener noreferrer"
+                class="menu-mobile__link menu-mobile__link--social">Facebook</a>
+            </li>
+            <li class="menu-mobile__social-list">
+              <a href="" target="_blank" rel="external noopener noreferrer"
+                class="menu-mobile__link menu-mobile__link--social">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
+    </div>
+    <div class="menu container">
+      <a class="logo logo--color" href="index.html">WebStudio</a>
+      <nav class="nav-submenu">
+        <a class="nav-submenu__link" href="index.html#Agencja">Agencja</a>
+        <a class="nav-submenu__link nav-submenu__link--present" href="portfolio.html">Portfolio</a>
+        <a class="nav-submenu__link" href="#Kontakt">Kontakt</a>
+      </nav>
       <div class="menu-right">
         <a class="menu-right__link" href="mailto:info@devstudio.com"><svg width="16px" height="16px"
-            class="menu-right__icon-mail-phone">
+            class="menu-right__icon menu-right__icon--mail">
             <use href="images/icons.svg#icon-envelope"></use>
           </svg>info@devstudio.com</a>
         <a class="menu-right__link" href="tel:+48111111111"><svg width="16px" height="16px"
-            class="menu-right__icon-mail-phone">
+            class="menu-right__icon menu-right__icon--phone">
             <use href="images/icons.svg#icon-phone"></use>
           </svg>+48 111 111 111</a>
       </div>
@@ -62,8 +103,21 @@ font-family: "Roboto", sans-serif;-->
     </ul>
     <ul class="project-gallery container">
       <li class="project">
-        <div class="project__overlay-mask"><img src="images/portfolio/prj1.jpg" alt="3-portrety-na-laptopie" width="370"
-            height="294" />
+        <div class="project__overlay-mask"><img class="project__img" alt="3-portrety-na-laptopie"
+            src="images/portfolio/prj1.jpg" srcset="
+            images/portfolio/prj1-1200.jpg 370w,
+            images/portfolio/prj1-768.jpg 354w,
+            images/portfolio/prj1.jpg 450w,
+            images/portfolio/prj1-1200_2x.jpg 740w,
+            images/portfolio/prj1-768_2x.jpg 708w,
+            images/portfolio/prj1_2x.jpg 900w,
+            " sizes="
+            ((min-width: 1200px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 740px,
+            (min-width: 1200px) 370px,
+            ((min-width: 768px) and (max-width:1199px)) 354px,
+            ((min-width: 768px) and (max-width:1199px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 708px,
+            ((max-width: 767px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 900px,
+            100vw" />
           <div class="project__overlay">
             <p class="project__overlay-text"> Technocrack jest popularną platformą wykorzystywaną do rozpowszechniania
               koronawirusa. Firmy wykorzystują tę
@@ -75,8 +129,21 @@ font-family: "Roboto", sans-serif;-->
         <p class="project__type">Strona internetowa</p>
       </li>
       <li class="project">
-        <div class="project__overlay-mask"><img src="images//portfolio/prj2.jpg" alt="dwaj-zawodnicy-grajacy-w-kosza"
-            width="370" height="294" />
+        <div class="project__overlay-mask"><img class="project__img" alt="dwaj-zawodnicy-grajacy-w-kosza"
+            src="images//portfolio/prj2.jpg" srcset="
+            images/portfolio/prj2-1200.jpg 370w,
+            images/portfolio/prj2-768.jpg 354w,
+            images/portfolio/prj2.jpg 450w,
+            images/portfolio/prj2-1200_2x.jpg 740w,
+            images/portfolio/prj2-768_2x.jpg 708w,
+            images/portfolio/prj2_2x.jpg 900w,
+            " sizes="
+            ((min-width: 1200px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 740px,
+            (min-width: 1200px) 370px,
+            ((min-width: 768px) and (max-width:1199px)) 354px,
+            ((min-width: 768px) and (max-width:1199px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 708px,
+            ((max-width: 767px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 900px,
+            100vw" />
           <div class="project__overlay">
             <p class="project__overlay-text"> Technocrack jest popularną platformą wykorzystywaną do rozpowszechniania
               koronawirusa. Firmy
@@ -89,8 +156,21 @@ font-family: "Roboto", sans-serif;-->
         <p class="project__type">Dizajn</p>
       </li>
       <li class="project">
-        <div class="project__overlay-mask"><img src="images/portfolio/prj3.jpg" alt="logo-seafood" width="370"
-            height="294" />
+        <div class="project__overlay-mask"><img class="project__img" alt="logo-seafood" src="images/portfolio/prj3.jpg"
+            srcset="
+            images/portfolio/prj3-1200.jpg 370w,
+            images/portfolio/prj3-768.jpg 354w,
+            images/portfolio/prj3.jpg 450w,
+            images/portfolio/prj3-1200_2x.jpg 740w,
+            images/portfolio/prj3-768_2x.jpg 708w,
+            images/portfolio/prj3_2x.jpg 900w,
+            " sizes="
+            ((min-width: 1200px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 740px,
+            (min-width: 1200px) 370px,
+            ((min-width: 768px) and (max-width:1199px)) 354px,
+            ((min-width: 768px) and (max-width:1199px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 708px,
+            ((max-width: 767px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 900px,
+            100vw" />
           <div class="project__overlay">
             <p class="project__overlay-text"> Technocrack jest popularną platformą wykorzystywaną do rozpowszechniania
               koronawirusa. Firmy
@@ -103,8 +183,21 @@ font-family: "Roboto", sans-serif;-->
         <p class="project__type">Aplikacja</p>
       </li>
       <li class="project">
-        <div class="project__overlay-mask"><img src="images/portfolio/prj4.jpg" alt="czarne-sluchawki" width="370"
-            height="294" />
+        <div class="project__overlay-mask"><img class="project__img" alt="czarne-sluchawki"
+            src="images/portfolio/prj4.jpg" srcset="
+            images/portfolio/prj4-1200.jpg 370w,
+            images/portfolio/prj4-768.jpg 354w,
+            images/portfolio/prj4.jpg 450w,
+            images/portfolio/prj4-1200_2x.jpg 740w,
+            images/portfolio/prj4-768_2x.jpg 708w,
+            images/portfolio/prj4_2x.jpg 900w,
+            " sizes="
+            ((min-width: 1200px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 740px,
+            (min-width: 1200px) 370px,
+            ((min-width: 768px) and (max-width:1199px)) 354px,
+            ((min-width: 768px) and (max-width:1199px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 708px,
+            ((max-width: 767px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 900px,
+            100vw" />
           <div class="project__overlay">
             <p class="project__overlay-text"> Technocrack jest popularną platformą wykorzystywaną do rozpowszechniania
               koronawirusa. Firmy
@@ -117,8 +210,21 @@ font-family: "Roboto", sans-serif;-->
         <p class="project__type">Marketing</p>
       </li>
       <li class="project">
-        <div class="project__overlay-mask"><img src="images/portfolio/prj5.jpg" alt="pudelko-biale-i-brazowe"
-            width="370" height="294" />
+        <div class="project__overlay-mask"><img class="project__img" alt="pudelko-biale-i-brazowe"
+            src="images/portfolio/prj5.jpg" srcset="
+            images/portfolio/prj5-1200.jpg 370w,
+            images/portfolio/prj5-768.jpg 354w,
+            images/portfolio/prj5.jpg 450w,
+            images/portfolio/prj5-1200_2x.jpg 740w,
+            images/portfolio/prj5-768_2x.jpg 708w,
+            images/portfolio/prj5_2x.jpg 900w,
+            " sizes="
+            ((min-width: 1200px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 740px,
+            (min-width: 1200px) 370px,
+            ((min-width: 768px) and (max-width:1199px)) 354px,
+            ((min-width: 768px) and (max-width:1199px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 708px,
+            ((max-width: 767px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 900px,
+            100vw" />
           <div class="project__overlay">
             <p class="project__overlay-text"> Technocrack jest popularną platformą wykorzystywaną do rozpowszechniania
               koronawirusa. Firmy
@@ -131,8 +237,21 @@ font-family: "Roboto", sans-serif;-->
         <p class="project__type">Aplikacja</p>
       </li>
       <li class="project">
-        <div class="project__overlay-mask"><img src="images/portfolio/prj6.jpg" alt="monitor-z-tekstem-na-czarnym-tle"
-            width="370" height="294" />
+        <div class="project__overlay-mask"><img class="project__img" alt="monitor-z-tekstem-na-czarnym-tle"
+            src="images/portfolio/prj6.jpg" srcset="
+            images/portfolio/prj6-1200.jpg 370w,
+            images/portfolio/prj6-768.jpg 354w,
+            images/portfolio/prj6.jpg 450w,
+            images/portfolio/prj6-1200_2x.jpg 740w,
+            images/portfolio/prj6-768_2x.jpg 708w,
+            images/portfolio/prj6_2x.jpg 900w,
+            " sizes="
+            ((min-width: 1200px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 740px,
+            (min-width: 1200px) 370px,
+            ((min-width: 768px) and (max-width:1199px)) 354px,
+            ((min-width: 768px) and (max-width:1199px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 708px,
+            ((max-width: 767px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 900px,
+            100vw" />
           <div class="project__overlay">
             <p class="project__overlay-text"> Technocrack jest popularną platformą wykorzystywaną do rozpowszechniania
               koronawirusa. Firmy
@@ -145,8 +264,21 @@ font-family: "Roboto", sans-serif;-->
         <p class="project__type">Strona internetowa</p>
       </li>
       <li class="project">
-        <div class="project__overlay-mask"><img src="images/portfolio/prj7.jpg" alt="otwarty-magazyn" width="370"
-            height="294" />
+        <div class="project__overlay-mask"><img class="project__img" alt="otwarty-magazyn"
+            src="images/portfolio/prj7.jpg" srcset="
+            images/portfolio/prj7-1200.jpg 370w,
+            images/portfolio/prj7-768.jpg 354w,
+            images/portfolio/prj7.jpg 450w,
+            images/portfolio/prj7-1200_2x.jpg 740w,
+            images/portfolio/prj7-768_2x.jpg 708w,
+            images/portfolio/prj7_2x.jpg 900w,
+            " sizes="
+            ((min-width: 1200px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 740px,
+            (min-width: 1200px) 370px,
+            ((min-width: 768px) and (max-width:1199px)) 354px,
+            ((min-width: 768px) and (max-width:1199px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 708px,
+            ((max-width: 767px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 900px,
+            100vw" />
           <div class="project__overlay">
             <p class="project__overlay-text"> Technocrack jest popularną platformą wykorzystywaną do rozpowszechniania
               koronawirusa. Firmy
@@ -159,8 +291,21 @@ font-family: "Roboto", sans-serif;-->
         <p class="project__type">Dizajn</p>
       </li>
       <li class="project">
-        <div class="project__overlay-mask"><img src="images/portfolio/prj8.jpg" alt="etykieta-LABELTAG" width="370"
-            height="294" />
+        <div class="project__overlay-mask"><img class="project__img" alt="etykieta-LABELTAG"
+            src="images/portfolio/prj8.jpg" srcset="
+            images/portfolio/prj8-1200.jpg 370w,
+            images/portfolio/prj8-768.jpg 354w,
+            images/portfolio/prj8.jpg 450w,
+            images/portfolio/prj8-1200_2x.jpg 740w,
+            images/portfolio/prj8-768_2x.jpg 708w,
+            images/portfolio/prj8_2x.jpg 900w,
+            " sizes="
+            ((min-width: 1200px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 740px,
+            (min-width: 1200px) 370px,
+            ((min-width: 768px) and (max-width:1199px)) 354px,
+            ((min-width: 768px) and (max-width:1199px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 708px,
+            ((max-width: 767px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 900px,
+            100vw" />
           <div class="project__overlay">
             <p class="project__overlay-text"> Technocrack jest popularną platformą wykorzystywaną do rozpowszechniania
               koronawirusa. Firmy
@@ -173,8 +318,21 @@ font-family: "Roboto", sans-serif;-->
         <p class="project__type">Marketing</p>
       </li>
       <li class="project">
-        <div class="project__overlay-mask"><img class="project__img" src="images/portfolio/prj9.jpg"
-            alt="laptop-z-rekami" width="370" height="294" />
+        <div class="project__overlay-mask"><img class="project__img" alt="laptop-z-rekami"
+            src="images/portfolio/prj9.jpg" srcset="
+            images/portfolio/prj9-1200.jpg 370w,
+            images/portfolio/prj9-768.jpg 354w,
+            images/portfolio/prj9.jpg 450w,
+            images/portfolio/prj9-1200_2x.jpg 740w,
+            images/portfolio/prj9-768_2x.jpg 708w,
+            images/portfolio/prj9_2x.jpg 900w,
+            " sizes="
+            ((min-width: 1200px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 740px,
+            (min-width: 1200px) 370px,
+            ((min-width: 768px) and (max-width:1199px)) 354px,
+            ((min-width: 768px) and (max-width:1199px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 708px,
+            ((max-width: 767px) and (min-resolution: 2dppx) and (min-device-pixel-ratio: 2)) 900px,
+            100vw" />
           <div class="project__overlay">
             <p class="project__overlay-text"> Technocrack jest popularną platformą wykorzystywaną do rozpowszechniania
               koronawirusa. Firmy
@@ -192,7 +350,7 @@ font-family: "Roboto", sans-serif;-->
   <!--do not write menu again!! just copy it from index.html watch out for .nav-link-present - its in diffrent link in diffrent hmtl-->
   <footer id="Kontakt" class="contact-data">
     <div class="container footer-flex">
-      <div>
+      <div class="footer-flex__logo-address">
         <a href="index.html" class="logo logo--color-contr">WebStudio</a>
         <address class="address-group">
           <p class="address-group__text">
@@ -232,11 +390,11 @@ font-family: "Roboto", sans-serif;-->
         </ul>
       </div>
       <div class="email-input">
-        <p class="email-input__text">zapisz się do newslettera</p>
         <form name="email-input-form" class="email-input__form">
-          <label>
-            <input type="email" name="newsletter" placeholder="E-mail" class="email-input__entry" />
+          <label class="email-input__text">
+            zapisz się do newslettera
           </label>
+          <input type="email" name="newsletter" placeholder="E-mail" class="email-input__entry" />
           <button type="submit" class="button1">Zapisz się <svg width="24px" height="24px" class="button1__icon-send">
               <use href="images/icons.svg#icon-send"></use>
             </svg></button>

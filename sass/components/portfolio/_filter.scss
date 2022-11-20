@@ -1,14 +1,32 @@
 .filter {
   display: flex;
   align-items: center;
-  justify-content: center;
-  row-gap: 8px;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  row-gap: 15px;
+  margin-bottom: 40px;
+  padding: 0 15px;
+
+  @include tablet {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @include desktop {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  &__button-sizes {
+    width: fit-content;
+  }
 
   &__button {
     background-color: getColor(team-and-button);
-    padding: 6px 22px;
-    margin: 0 4px;
+    width: inherit;
+    padding: 6px 0;
     border: 4px;
     border-radius: 4px;
     font-family: 'Roboto';
@@ -34,3 +52,39 @@
     }
   }
 }
+
+// .filter {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   row-gap: 8px;
+//   margin-bottom: 50px;
+
+//   &__button {
+//     background-color: getColor(team-and-button);
+//     padding: 6px 22px;
+//     border: 4px;
+//     border-radius: 4px;
+//     font-family: 'Roboto';
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 16px;
+//     line-height: 1.62;
+//     text-align: center;
+//     letter-spacing: 0.03em;
+//     color: inherit;
+//     transition: background-color $transition-time-timing,
+//       color $transition-time-timing, box-shadow $transition-time-timing,
+//       border-radius $transition-time-timing;
+
+//     &:active,
+//     &:hover {
+//       background-color: getColor(highlighter);
+//       color: #fff;
+//       box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+//         0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+//       border-radius: 4px;
+//       cursor: pointer;
+//     }
+//   }
+// }

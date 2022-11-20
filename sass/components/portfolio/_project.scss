@@ -1,62 +1,136 @@
 .project {
   display: block;
   position: relative;
-  height: 404px;
-  max-width: 370px;
+  width: 100%;
+  height: auto;
   border: 1px;
   border-style: solid;
   border-color: getColor(project-gallery-border);
-  flex-basis: calc((100% - 60px) / 3);
   transition: box-shadow $transition-time-timing;
-  line-height: 0;
 
-  &:hover {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-      1px 4px 6px rgba(0, 0, 0, 0.16);
-    cursor: pointer;
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
 
-    .project__overlay {
-      transform: translateY(0);
+  @include desktop {
+    width: calc((100% - 60px) / 3);}
+
+    &__img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    &:hover {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+      cursor: pointer;
+
+      .project__overlay {
+        transform: translateY(0);
+      }
+    }
+
+    &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 49px 45px 49px 24px;
+      background-color: rgba(33, 150, 243, 0.9);
+      transform: translateY(100%);
+      transition: transform $transition-time-timing;
+    }
+
+    &__overlay-text {
+      font-size: 18px;
+      line-height: 1.56;
+      letter-spacing: 0.03em;
+      color: #ffffff;
+    }
+
+    &__overlay-mask {
+      position: relative;
+      overflow: hidden;
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 2;
+      letter-spacing: 0.06em;
+      padding: 20px 24px 0;
+    }
+
+    &__type {
+      font-size: 16px;
+      line-height: 1.88;
+      letter-spacing: 0.03em;
+      color: getColor(ordinary-font);
+      padding: 0 0 20px 24px;
     }
   }
 
-  &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 294px;
-    padding: 49px 45px 49px 24px;
-    background-color: rgba(33, 150, 243, 0.9);
-    transform: translateY(100%);
-    transition: transform $transition-time-timing;
-  }
+// .project {
+//   display: block;
+//   position: relative;
+//   height: 404px;
+//   max-width: 370px;
+//   border: 1px;
+//   border-style: solid;
+//   border-color: getColor(project-gallery-border);
+//   flex-basis: calc((100% - 60px) / 3);
+//   transition: box-shadow $transition-time-timing;
+//   line-height: 0;
 
-  &__overlay-text {
-    font-size: 18px;
-    line-height: 1.56;
-    letter-spacing: 0.03em;
-    color: #ffffff;
-  }
+//   &:hover {
+//     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+//       1px 4px 6px rgba(0, 0, 0, 0.16);
+//     cursor: pointer;
 
-  &__overlay-mask {
-    position: relative;
-    overflow: hidden;
-  }
+//     .project__overlay {
+//       transform: translateY(0);
+//     }
+//   }
 
-  &__title {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-    padding: 20px 0 0 24px;
-  }
+//   &__overlay {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 294px;
+//     padding: 49px 45px 49px 24px;
+//     background-color: rgba(33, 150, 243, 0.9);
+//     transform: translateY(100%);
+//     transition: transform $transition-time-timing;
+//   }
 
-&__type {
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.03em;
-    color: getColor(ordinary-font);
-    padding: 0 0 20px 24px;
-  }
-}
+//   &__overlay-text {
+//     font-size: 18px;
+//     line-height: 1.56;
+//     letter-spacing: 0.03em;
+//     color: #ffffff;
+//   }
+
+//   &__overlay-mask {
+//     position: relative;
+//     overflow: hidden;
+//   }
+
+//   &__title {
+//     font-weight: 700;
+//     font-size: 18px;
+//     line-height: 2;
+//     letter-spacing: 0.06em;
+//     padding: 20px 0 0 24px;
+//   }
+
+// &__type {
+//     font-size: 16px;
+//     line-height: 1.88;
+//     letter-spacing: 0.03em;
+//     color: getColor(ordinary-font);
+//     padding: 0 0 20px 24px;
+//   }
+// }
