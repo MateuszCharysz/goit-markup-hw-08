@@ -287,6 +287,8 @@ body {
 @media screen and (min-width: 1200px) {
   .nav-submenu {
     width: 254px;
+    -webkit-transform: translateX(-129px);
+            transform: translateX(-129px);
   }
 }
 .nav-submenu__link {

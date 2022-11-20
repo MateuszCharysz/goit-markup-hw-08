@@ -4,7 +4,8 @@
   width: 282px;
   justify-content: space-between;
 
-  @include desktop {width: 254px;}
+  @include desktop {width: 254px;
+  transform: translateX(-129px);}
 
   &__link {
     text-decoration: none;
