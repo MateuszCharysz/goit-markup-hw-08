@@ -5,6 +5,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
     transform: translateY(100%);
     transition: transform $transition-time-timing;
     padding: 48px 40px;
