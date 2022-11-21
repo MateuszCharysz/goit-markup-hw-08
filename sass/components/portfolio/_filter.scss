@@ -14,13 +14,17 @@
   }
 
   @include desktop {
+    display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
   }
 
   &__button-sizes {
-    width: fit-content;
+    display: inline-block;
+    &:nth-child(3) {width: 145px;}
+    &:nth-child(3n+2) {width: 130px;}
+    &:nth-child(3n+1) {width: 103px;}
   }
 
   &__button {
@@ -40,6 +44,8 @@
     transition: background-color $transition-time-timing,
       color $transition-time-timing, box-shadow $transition-time-timing,
       border-radius $transition-time-timing;
+
+      @include desktop {padding: 6px 22px;}
 
     &:active,
     &:hover {
